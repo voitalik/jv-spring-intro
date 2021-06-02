@@ -20,6 +20,6 @@
     - Bean
     - Bean Autowiring
     - Difference between @Bean and @Autowired and @Qualifier
-    - What means each annotation used in videos?
+    - What does each annotation used in videos mean?
 
 __You can check yourself using this__ [checklist](https://mate-academy.github.io/jv-program-common-mistakes/java-spring/intro/java-spring-intro)
