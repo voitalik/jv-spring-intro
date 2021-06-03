@@ -9,9 +9,8 @@
           List<User> listUsers();
       }
     ```
-- Create a Main class. Configure ApplicationContext
-
-- In the Main class show how you are saving User into DB and reading him back
+- In the Main class configure ApplicationContext and show how you are saving User into DB and
+  reading him back
 
 - Configure DataSource
 
