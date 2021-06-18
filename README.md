@@ -6,7 +6,7 @@
       public interface UserService {
           void add(User user);
       
-          List<User> listUsers();
+          List<User> getAll();
       }
     ```
 - In the Main class configure ApplicationContext and show how you are saving User into DB and
