@@ -10,7 +10,7 @@
       }
     ```
   
-- User should have `age`, `name` fields and overridden `equals()` and `hashcode()`
+- User should have `age`, `name` fields and overridden `equals()` and `hashcode()` methods
 
 - In the Main class configure ApplicationContext and show how you are saving User into DB and
   reading him back
