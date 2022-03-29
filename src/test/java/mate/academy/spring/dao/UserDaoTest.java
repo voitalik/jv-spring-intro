@@ -5,7 +5,7 @@ import static org.junit.Assert.assertNotNull;
 
 import java.util.Collections;
 import java.util.List;
-import mate.academy.spring.config.AppConfig;
+import mate.academy.spring.config.TestAppConfig;
 import mate.academy.spring.model.User;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -17,7 +17,7 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = AppConfig.class)
+@ContextConfiguration(classes = TestAppConfig.class)
 @TestPropertySource(locations="classpath:application.properties")
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 public class UserDaoTest {
@@ -26,7 +26,7 @@ public class UserDaoTest {
   @BeforeClass
   public static void setUp() {
     AnnotationConfigApplicationContext context =
-        new AnnotationConfigApplicationContext(AppConfig.class);
+        new AnnotationConfigApplicationContext(TestAppConfig.class);
     userDao = context.getBean(UserDao.class);
   }
 
