@@ -9,6 +9,9 @@
           List<User> getAll();
       }
     ```
+  
+- User should have `age`, `name` fields and overridden `equals()` and `hashcode()`
+
 - In the Main class configure ApplicationContext and show how you are saving User into DB and
   reading him back
 
