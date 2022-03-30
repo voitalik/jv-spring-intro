@@ -1,7 +1,8 @@
 # Spring Framework intro
 
 
-- Add all needed dependencies. Adding Spring dependencies use the same version for each of them. For this purpose you can use property `spring.version`
+- Add all needed dependencies. Adding Spring dependencies use the same version for each of them. 
+For this purpose you can use property `spring.version`. See example in `<artifactId>spring-test</artifactId>` dependency.
 
 - Implement UserService and UserDao
   
