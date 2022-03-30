@@ -16,6 +16,7 @@
         <maven.checkstyle.plugin.configLocation>
             https://raw.githubusercontent.com/mate-academy/style-guides/master/java/checkstyle.xml
         </maven.checkstyle.plugin.configLocation>
+        <spring.version>5.3.17</spring.version>
     </properties>
 
     <dependencies>
@@ -34,7 +35,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>5.3.17</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
