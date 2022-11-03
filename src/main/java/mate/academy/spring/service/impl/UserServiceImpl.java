@@ -6,6 +6,8 @@ import mate.academy.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     private final UserDao userDao;
@@ -21,7 +23,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User get(Long id) {
-        return userDao.get(id).orElseThrow();
+    public List<User> getAll() {
+        return userDao.getAll();
     }
 }

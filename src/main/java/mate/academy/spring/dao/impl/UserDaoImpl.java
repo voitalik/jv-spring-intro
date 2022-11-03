@@ -10,7 +10,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -44,14 +44,12 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public Optional<User> get(Long id) {
+    public List<User> getAll() {
         try (Session session = sessionFactory.openSession()) {
-            Query<User> query = session.createQuery("FROM User u "
-                    + "WHERE u.id = :id", User.class);
-            query.setParameter("id", id);
-            return query.uniqueResultOptional();
+            Query<User> query = session.createQuery("FROM User u", User.class);
+            return query.getResultList();
         } catch (Exception e) {
-            throw new DataProcessingException("Can't find user by id: " + id, e);
+            throw new DataProcessingException("Can't get all users", e);
         }
     }
 }
