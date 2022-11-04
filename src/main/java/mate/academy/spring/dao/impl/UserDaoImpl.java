@@ -1,5 +1,6 @@
 package mate.academy.spring.dao.impl;
 
+import java.util.List;
 import mate.academy.spring.dao.UserDao;
 import mate.academy.spring.exception.DataProcessingException;
 import mate.academy.spring.model.User;
@@ -9,8 +10,6 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -22,7 +21,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public User save(User user) {
+    public User add(User user) {
         Transaction transaction = null;
         Session session = null;
         try {

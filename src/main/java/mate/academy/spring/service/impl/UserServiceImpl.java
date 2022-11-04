@@ -1,12 +1,11 @@
 package mate.academy.spring.service.impl;
 
+import java.util.List;
 import mate.academy.spring.dao.UserDao;
 import mate.academy.spring.model.User;
 import mate.academy.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -18,8 +17,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User save(User user) {
-        return userDao.save(user);
+    public User add(User user) {
+        return userDao.add(user);
     }
 
     @Override
